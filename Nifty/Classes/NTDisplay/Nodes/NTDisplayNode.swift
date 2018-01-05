@@ -54,13 +54,10 @@ public class NTDisplayNode: ASDisplayNode {
         _executor = executor ?? NTExecutor(withDelegate: self)
         _arguments = args
         
-        DispatchQueue.global(qos: .userInteractive).async {
-            self._ntLayoutElement = self._ntLayoutElementFrom(scriptNamed: self._scriptName, args:self._arguments)
-            if let asNode = self._ntLayoutElement?.asLayoutElement as? ASDisplayNode {
-                DispatchQueue.main.async {
-                    self.addSubnode(asNode)
-                }
-            }
+        self._ntLayoutElement = self._ntLayoutElementFrom(scriptNamed: self._scriptName, args:self._arguments)
+        if let asNode = self._ntLayoutElement?.asLayoutElement as? ASDisplayNode {
+            self.style.preferredSize = asNode.style.preferredSize
+            self.addSubnode(asNode)
         }
         
 //        self.onDidLoad { (node) in

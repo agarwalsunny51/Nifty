@@ -22,7 +22,7 @@ Renderer.render = function() {
     superNode.backgroundColor = Color.withRGB(1, 0.5, 0.25, 1)
 
     // Set frame for super node
-    superNode.frame = {x: 0, y: 0, width: ScreenBounds.width, height: 100}
+    superNode.preferredSize = {width: ScreenBounds.width, height: 100}
       
     
     function getChildren () {
