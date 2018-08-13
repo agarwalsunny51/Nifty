@@ -1404,7 +1404,10 @@ extension NTNode: NTLayoutElement {
     
     public var minSize: CGSize {
         get {
-            return self.asLayoutElement?.style.minSize ?? CGSize.zero
+            if let minHeight = self.asLayoutElement?.style.minHeight, let minWidth = self.asLayoutElement?.style.minWidth {
+                return CGSize(width: minWidth.value, height: minHeight.value)
+            }
+            return .zero
         }
         set {
             self.asLayoutElement?.style.minSize = newValue
@@ -1413,7 +1416,10 @@ extension NTNode: NTLayoutElement {
 
     public var maxSize: CGSize {
         get {
-            return self.asLayoutElement?.style.maxSize ?? UIScreen.main.bounds.size
+            if let maxHeight = self.asLayoutElement?.style.maxHeight, let maxWidth = self.asLayoutElement?.style.maxWidth {
+                return CGSize(width: maxWidth.value, height: maxHeight.value)
+            }
+            return UIScreen.main.bounds.size
         }
         set {
             self.asLayoutElement?.style.maxSize = newValue

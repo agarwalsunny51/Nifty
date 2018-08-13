@@ -51,7 +51,7 @@ public let NTImageResizingModeStretch = UIImageResizingMode.stretch.rawValue
 
 
 //MARK: UIImageExports
-@objc public protocol UIImageExports: JSExport {
+public protocol UIImageExports: JSExport {
     
     static func createWithName(_ name: String) -> UIImage?
     static func createWithPath(_ path: String) -> UIImage?
