@@ -45,13 +45,13 @@ internal struct NTImageConsts {
 
 
 public typealias NTImageResizingMode = UIImageResizingMode.RawValue
-public let NTImageResizingModeTile = UIImageResizingMode.tile.rawValue
-public let NTImageResizingModeStretch = UIImageResizingMode.stretch.rawValue
+public let NTImageResizingModeTile = UIImageResizingMode.tile
+public let NTImageResizingModeStretch = UIImageResizingMode.stretch
 
 
 
 //MARK: UIImageExports
-public protocol UIImageExports: JSExport {
+@objc public protocol UIImageExports: JSExport {
     
     static func createWithName(_ name: String) -> UIImage?
     static func createWithPath(_ path: String) -> UIImage?
