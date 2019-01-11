@@ -32,7 +32,7 @@ extension NTConverter: NTInsetsConverter {
     static func mapToEdgeInsets(_ map: [String: Double]) -> UIEdgeInsets? {
         
         if let top = map["top"], let left = map["left"], let bottom = map["bottom"], let right = map["right"] {
-            return UIEdgeInsetsMake(CGFloat(top), CGFloat(left), CGFloat(bottom), CGFloat(right))
+            return UIEdgeInsets.init(top: CGFloat(top), left: CGFloat(left), bottom: CGFloat(bottom), right: CGFloat(right))
         }
         return nil
     }

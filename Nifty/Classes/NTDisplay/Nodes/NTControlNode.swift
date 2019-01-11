@@ -24,14 +24,14 @@ public let NTControlEventValueChanged = ASControlNodeEvent.valueChanged.rawValue
 public let NTControlEventPrimaryActionTriggered = ASControlNodeEvent.primaryActionTriggered.rawValue
 public let NTControlEventAllEvents = ASControlNodeEvent.allEvents.rawValue
 
-public typealias NTControlState = UIControlState.RawValue
-public let NTControlStateNormal = UIControlState.normal.rawValue
-public let NTControlStateHighlighted = UIControlState.highlighted.rawValue
-public let NTControlStateDisabled = UIControlState.disabled.rawValue
-public let NTControlStateSelected = UIControlState.selected.rawValue
-public let NTControlStateFocused = UIControlState.focused.rawValue
-public let NTControlStateApplication = UIControlState.application.rawValue
-public let NTControlStateReserved = UIControlState.reserved.rawValue
+public typealias NTControlState = UIControl.State.RawValue
+public let NTControlStateNormal = UIControl.State.normal.rawValue
+public let NTControlStateHighlighted = UIControl.State.highlighted.rawValue
+public let NTControlStateDisabled = UIControl.State.disabled.rawValue
+public let NTControlStateSelected = UIControl.State.selected.rawValue
+public let NTControlStateFocused = UIControl.State.focused.rawValue
+public let NTControlStateApplication = UIControl.State.application.rawValue
+public let NTControlStateReserved = UIControl.State.reserved.rawValue
 
 
 public typealias NTControlNodeCallback = @convention(block) (NTControlNode) -> ()

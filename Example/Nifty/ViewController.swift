@@ -128,7 +128,7 @@ extension ViewController: ASTableDataSource, ASTableDelegate {
     
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-        let nodeBlock: ASCellNodeBlock = { [unowned self] _ in
+        let nodeBlock: ASCellNodeBlock = { [unowned self] in
 //            let executor = self?._commonExecutor ?? NTExecutor()
             let threadID: String = "\(Thread.current)"
             let executor: NTExecutor = self._sharedContext ? self._commonExecutor : self.dequeReusableExecutor(forThreadID: threadID)

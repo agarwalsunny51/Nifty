@@ -20,10 +20,10 @@ import JavaScriptCore
 */
 
 //MARK: Constants
-public typealias NTImageRenderingMode = UIImageRenderingMode.RawValue
-public let NTImageRenderingModeAutomatic = UIImageRenderingMode.automatic.rawValue
-public let NTImageRenderingModeOriginal = UIImageRenderingMode.alwaysOriginal.rawValue
-public let NTImageRenderingModeTemplate = UIImageRenderingMode.alwaysTemplate.rawValue
+public typealias NTImageRenderingMode = UIImage.RenderingMode.RawValue
+public let NTImageRenderingModeAutomatic = UIImage.RenderingMode.automatic.rawValue
+public let NTImageRenderingModeOriginal = UIImage.RenderingMode.alwaysOriginal.rawValue
+public let NTImageRenderingModeTemplate = UIImage.RenderingMode.alwaysTemplate.rawValue
 
 
 internal struct NTImageConsts {
@@ -44,9 +44,9 @@ internal struct NTImageConsts {
 }
 
 
-public typealias NTImageResizingMode = UIImageResizingMode.RawValue
-public let NTImageResizingModeTile = UIImageResizingMode.tile
-public let NTImageResizingModeStretch = UIImageResizingMode.stretch
+public typealias NTImageResizingMode = UIImage.ResizingMode.RawValue
+public let NTImageResizingModeTile = UIImage.ResizingMode.tile
+public let NTImageResizingModeStretch = UIImage.ResizingMode.stretch
 
 
 
@@ -62,7 +62,7 @@ public let NTImageResizingModeStretch = UIImageResizingMode.stretch
     static func animatedWithImagesAndDuration(_ images: [UIImage], _ duration: TimeInterval) -> UIImage?
     
     var size: CGSize {get}
-    var imageOrientation: UIImageOrientation { get }
+    var imageOrientation: UIImage.Orientation { get }
     var scale: CGFloat { get }
     
     var images: [UIImage]? { get }
@@ -92,7 +92,7 @@ public let NTImageResizingModeStretch = UIImageResizingMode.stretch
 extension UIImage: UIImageExports {
 
     public func forRenderingMode(_ renderingMode: NTImageRenderingMode) -> UIImage {
-        return self.withRenderingMode(UIImageRenderingMode(rawValue: renderingMode) ?? .automatic)
+        return self.withRenderingMode(UIImage.RenderingMode(rawValue: renderingMode) ?? .automatic)
     }
 
     public var imageRenderingMode: NTImageRenderingMode {
@@ -128,7 +128,7 @@ extension UIImage: UIImageExports {
     public func resizableWithCapInsetsAndMode(_ insets: [String : Double], _ resizingMode: NTImageResizingMode) -> UIImage? {
         
         if let insets = NTConverter.mapToEdgeInsets(insets) {
-            return self.resizableImage(withCapInsets: insets, resizingMode: UIImageResizingMode(rawValue: resizingMode) ?? .stretch)
+            return self.resizableImage(withCapInsets: insets, resizingMode: UIImage.ResizingMode(rawValue: resizingMode) ?? .stretch)
         }
         return nil
     }
@@ -148,7 +148,7 @@ extension UIImage: UIImageExports {
     public static func animatedResizableWithNameInsetsModeAndDuration(_ name: String, _ capInsets: [String : Double], _ resizingMode: NTImageResizingMode, _ duration: TimeInterval) -> UIImage? {
         
         if let insets = NTConverter.mapToEdgeInsets(capInsets) {
-            return UIImage.animatedResizableImageNamed(name, capInsets: insets, resizingMode: UIImageResizingMode(rawValue: resizingMode) ?? .stretch, duration: duration)
+            return UIImage.animatedResizableImageNamed(name, capInsets: insets, resizingMode: UIImage.ResizingMode(rawValue: resizingMode) ?? .stretch, duration: duration)
         }
         return nil
     }

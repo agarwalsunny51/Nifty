@@ -354,26 +354,26 @@ public typealias NTNodeDidLoadBlock = (NTNode) -> ()
                                                               NTNodeConsts.Node.InterfaceState.visible.rawValue: ASInterfaceState.visible.rawValue,
                                                               NTNodeConsts.Node.InterfaceState.inHierarchy.rawValue: ASInterfaceState.inHierarchy.rawValue],
                            
-                           NTNodeConsts.Node.autoResizing: [NTNodeConsts.Node.AutoResizing.flexibleLeft.rawValue: UIViewAutoresizing.flexibleLeftMargin.rawValue,
-                                                            NTNodeConsts.Node.AutoResizing.flexibleRight.rawValue: UIViewAutoresizing.flexibleRightMargin.rawValue,
-                                                            NTNodeConsts.Node.AutoResizing.flexibleTop.rawValue: UIViewAutoresizing.flexibleTopMargin.rawValue,
-                                                            NTNodeConsts.Node.AutoResizing.flexibleBottom.rawValue: UIViewAutoresizing.flexibleBottomMargin.rawValue,
-                                                            NTNodeConsts.Node.AutoResizing.flexibleWidth.rawValue: UIViewAutoresizing.flexibleWidth.rawValue,
-                                                            NTNodeConsts.Node.AutoResizing.flexibleHeight.rawValue: UIViewAutoresizing.flexibleHeight.rawValue],
+                           NTNodeConsts.Node.autoResizing: [NTNodeConsts.Node.AutoResizing.flexibleLeft.rawValue: UIView.AutoresizingMask.flexibleLeftMargin.rawValue,
+                                                            NTNodeConsts.Node.AutoResizing.flexibleRight.rawValue: UIView.AutoresizingMask.flexibleRightMargin.rawValue,
+                                                            NTNodeConsts.Node.AutoResizing.flexibleTop.rawValue: UIView.AutoresizingMask.flexibleTopMargin.rawValue,
+                                                            NTNodeConsts.Node.AutoResizing.flexibleBottom.rawValue: UIView.AutoresizingMask.flexibleBottomMargin.rawValue,
+                                                            NTNodeConsts.Node.AutoResizing.flexibleWidth.rawValue: UIView.AutoresizingMask.flexibleWidth.rawValue,
+                                                            NTNodeConsts.Node.AutoResizing.flexibleHeight.rawValue: UIView.AutoresizingMask.flexibleHeight.rawValue],
                            
-                           NTNodeConsts.Node.contentMode:    [NTNodeConsts.Node.ContentMode.scaleToFill.rawValue: UIViewContentMode.scaleToFill.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.scaleAspectFit.rawValue: UIViewContentMode.scaleAspectFit.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.scaleAspectFill.rawValue: UIViewContentMode.scaleAspectFill.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.redraw.rawValue: UIViewContentMode.redraw.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.center.rawValue: UIViewContentMode.center.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.top.rawValue: UIViewContentMode.top.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.bottom.rawValue: UIViewContentMode.bottom.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.left.rawValue: UIViewContentMode.left.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.right.rawValue: UIViewContentMode.right.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.topLeft.rawValue: UIViewContentMode.topLeft.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.topRight.rawValue: UIViewContentMode.topRight.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.bottomLeft.rawValue: UIViewContentMode.bottomLeft.rawValue,
-                                                              NTNodeConsts.Node.ContentMode.bottomRight.rawValue: UIViewContentMode.bottomRight.rawValue]]
+                           NTNodeConsts.Node.contentMode:    [NTNodeConsts.Node.ContentMode.scaleToFill.rawValue: UIView.ContentMode.scaleToFill.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.scaleAspectFit.rawValue: UIView.ContentMode.scaleAspectFit.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.scaleAspectFill.rawValue: UIView.ContentMode.scaleAspectFill.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.redraw.rawValue: UIView.ContentMode.redraw.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.center.rawValue: UIView.ContentMode.center.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.top.rawValue: UIView.ContentMode.top.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.bottom.rawValue: UIView.ContentMode.bottom.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.left.rawValue: UIView.ContentMode.left.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.right.rawValue: UIView.ContentMode.right.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.topLeft.rawValue: UIView.ContentMode.topLeft.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.topRight.rawValue: UIView.ContentMode.topRight.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.bottomLeft.rawValue: UIView.ContentMode.bottomLeft.rawValue,
+                                                              NTNodeConsts.Node.ContentMode.bottomRight.rawValue: UIView.ContentMode.bottomRight.rawValue]]
         
         return constantMap
     }
@@ -1130,7 +1130,7 @@ extension NTNode {
             return self._asNode.autoresizingMask.rawValue
         }
         set {
-            self._asNode.autoresizingMask = UIViewAutoresizing(rawValue: newValue)
+            self._asNode.autoresizingMask = UIView.AutoresizingMask(rawValue: newValue)
         }
     }
     
@@ -1167,7 +1167,7 @@ extension NTNode {
             return self._asNode.contentMode.rawValue
         }
         set {
-            if let mode = UIViewContentMode(rawValue: newValue) {
+            if let mode = UIView.ContentMode(rawValue: newValue) {
                 self._asNode.contentMode = mode
             }
         }
