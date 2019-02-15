@@ -106,15 +106,15 @@ import AsyncDisplayKit
     }
     
     public func setTitle(_ title: String, _ font: UIFont?, _ color: UIColor?, _ state: NTControlState) {
-        self._buttonNode?.setTitle(title, with: font, with: color, for: UIControlState(rawValue: state))
+        self._buttonNode?.setTitle(title, with: font, with: color, for: UIControl.State(rawValue: state))
     }
     
     public func setBackgroundImage(_ image: UIImage?, _ state: NTControlState){
-        self._buttonNode?.setBackgroundImage(image, for: UIControlState(rawValue: state))
+        self._buttonNode?.setBackgroundImage(image, for: UIControl.State(rawValue: state))
     }
     
     public func setImage(_ image: UIImage?, _ state: NTControlState){
-        self._buttonNode?.setImage(image, for: UIControlState(rawValue: state))
+        self._buttonNode?.setImage(image, for: UIControl.State(rawValue: state))
     }
     
     

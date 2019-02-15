@@ -32,7 +32,7 @@ import JavaScriptCore
         
         self.timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(self.handleTimer), userInfo: nil, repeats: repeats)
         if let timer = self.timer {
-            RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+            RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
         }
     }
     
