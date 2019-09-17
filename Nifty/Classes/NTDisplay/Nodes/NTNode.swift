@@ -399,7 +399,7 @@ extension NTNode {
     /** @name Managing the nodes hierarchy */
     
     private func _removeSubnode(subnode: NTNode) {
-        if let index = self._subNodes.index(of: subnode) {
+        if let index = self._subNodes.firstIndex(of: subnode) {
             self._subNodes.remove(at: index)
             subnode._supernode = nil
         }
@@ -465,7 +465,7 @@ extension NTNode {
         var index: Int?
         
         _mutex.fastSync { () -> Void in
-            index = self._subNodes.index(of: below)
+            index = self._subNodes.firstIndex(of: below)
         }
         
         if let index = index {
@@ -491,7 +491,7 @@ extension NTNode {
         var index: Int?
         
         _mutex.fastSync { () -> Void in
-            index = self._subNodes.index(of: above)
+            index = self._subNodes.firstIndex(of: above)
         }
         
         if let index = index {
@@ -538,7 +538,7 @@ extension NTNode {
         var index: Int?
         
         _mutex.fastSync { () -> Void in
-            index = self._subNodes.index(of: subnode)
+            index = self._subNodes.firstIndex(of: subnode)
         }
         
         if let index = index {
