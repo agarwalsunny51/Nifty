@@ -143,27 +143,27 @@ static NSLock *colorNameCacheLock;
 	return YES;
 }
 
-- (CGFloat)red {
+- (CGFloat)redValue {
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -red");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	return c[0];
 }
 
-- (CGFloat)green {
+- (CGFloat)greenValue {
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -green");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	if (self.colorSpaceModel == kCGColorSpaceModelMonochrome) return c[0];
 	return c[1];
 }
 
-- (CGFloat)blue {
+- (CGFloat)blueValue {
 	NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -blue");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	if (self.colorSpaceModel == kCGColorSpaceModelMonochrome) return c[0];
 	return c[2];
 }
 
-- (CGFloat)white {
+- (CGFloat)whiteValue {
 //	NSAssert(self.colorSpaceModel == kCGColorSpaceModelMonochrome, @"Must be a Monochrome color to use -white");
 	const CGFloat *c = CGColorGetComponents(self.CGColor);
 	return c[0];
@@ -386,10 +386,10 @@ static NSLock *colorNameCacheLock;
 	NSString *result;
 	switch (self.colorSpaceModel) {
 		case kCGColorSpaceModelRGB:
-			result = [NSString stringWithFormat:@"{%0.3f, %0.3f, %0.3f, %0.3f}", self.red, self.green, self.blue, self.alpha];
+			result = [NSString stringWithFormat:@"{%0.3f, %0.3f, %0.3f, %0.3f}", self.redValue, self.greenValue, self.blueValue, self.alpha];
 			break;
 		case kCGColorSpaceModelMonochrome:
-			result = [NSString stringWithFormat:@"{%0.3f, %0.3f}", self.white, self.alpha];
+			result = [NSString stringWithFormat:@"{%0.3f, %0.3f}", self.whiteValue, self.alpha];
 			break;
 		default:
 			result = nil;

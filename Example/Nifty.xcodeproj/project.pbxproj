@@ -39,7 +39,7 @@
 		BBD3CBD21F0A85260079F90E /* Alpha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Alpha.js; sourceTree = "<group>"; };
 		BBFA0A331FB0DB34008D2E95 /* MyCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellNode.swift; sourceTree = "<group>"; };
 		BBFA0A351FB0DB93008D2E95 /* MyCell.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MyCell.js; sourceTree = "<group>"; };
-		C07D3DEC4481D8FA8C25628C /* Nifty.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nifty.podspec; path = ../Nifty.podspec; sourceTree = "<group>"; };
+		C07D3DEC4481D8FA8C25628C /* Nifty.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nifty.podspec; path = ../Nifty.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DB85DD2CDF25F136E506B484 /* Pods-Nifty_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nifty_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EFD05E0CD8AE5F2813CA993F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,7 +162,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				B5B882412C86A169A5D49C6C /* [CP] Embed Pods Frameworks */,
-				20A3F1BF1338029DA0A61C01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,28 +225,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20A3F1BF1338029DA0A61C01 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B5B882412C86A169A5D49C6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/NSAttributedString-DDHTML/NSAttributedString_DDHTML.framework",
 				"${BUILT_PRODUCTS_DIR}/Nifty/Nifty.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
@@ -266,7 +250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA50169CD95C6D25F40B57DE /* [CP] Check Pods Manifest.lock */ = {

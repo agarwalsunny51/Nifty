@@ -9,10 +9,10 @@
 // With the exception of -alpha, these properties will function
 // correctly only if this color is an RGB or white color.
 // In these cases, canProvideRGBComponents returns YES.
-@property (nonatomic, readonly) CGFloat red;
-@property (nonatomic, readonly) CGFloat green;
-@property (nonatomic, readonly) CGFloat blue;
-@property (nonatomic, readonly) CGFloat white;
+@property (nonatomic, readonly) CGFloat redValue;
+@property (nonatomic, readonly) CGFloat greenValue;
+@property (nonatomic, readonly) CGFloat blueValue;
+@property (nonatomic, readonly) CGFloat whiteValue;
 @property (nonatomic, readonly) CGFloat hue;
 @property (nonatomic, readonly) CGFloat saturation;
 @property (nonatomic, readonly) CGFloat brightness;
