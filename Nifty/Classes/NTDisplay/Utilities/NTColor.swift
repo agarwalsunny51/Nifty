@@ -60,10 +60,10 @@ import JavaScriptCore
     
     var canProvideRGBComponents: Bool {get}
     
-    var red: CGFloat {get}
-    var green: CGFloat {get}
-    var blue: CGFloat {get}
-    var white: CGFloat {get}
+    var redValue: CGFloat {get}
+    var greenValue: CGFloat {get}
+    var blueValue: CGFloat {get}
+    var whiteValue: CGFloat {get}
     var hue: CGFloat {get}
     var saturation: CGFloat {get}
     var brightness: CGFloat {get}
