@@ -39,7 +39,7 @@
 		BBD3CBD21F0A85260079F90E /* Alpha.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Alpha.js; sourceTree = "<group>"; };
 		BBFA0A331FB0DB34008D2E95 /* MyCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCellNode.swift; sourceTree = "<group>"; };
 		BBFA0A351FB0DB93008D2E95 /* MyCell.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MyCell.js; sourceTree = "<group>"; };
-		C07D3DEC4481D8FA8C25628C /* Nifty.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nifty.podspec; path = ../Nifty.podspec; sourceTree = "<group>"; };
+		C07D3DEC4481D8FA8C25628C /* Nifty.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Nifty.podspec; path = ../Nifty.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DB85DD2CDF25F136E506B484 /* Pods-Nifty_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nifty_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nifty_Example/Pods-Nifty_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EFD05E0CD8AE5F2813CA993F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */

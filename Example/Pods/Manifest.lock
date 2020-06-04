@@ -1,5 +1,5 @@
 PODS:
-  - Nifty (0.1.4):
+  - Nifty (0.1.5):
     - NSAttributedString-DDHTML
     - Texture
   - NSAttributedString-DDHTML (1.2.0)
@@ -42,7 +42,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Nifty: 4bfcd3b505a5624325b304254e8110df67fa0f42
+  Nifty: 7d7c4ab0a6463d474631a49eace4e4f297ba6c73
   NSAttributedString-DDHTML: 59a7bcd44b92cb7f6f6ef26f52c4baad6b1d01ba
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
