@@ -655,7 +655,7 @@ extension NTNode {
      */
     open var interfaceState: UInt {
         get {
-            return self._asNode.interfaceState.rawValue
+            return UInt(self._asNode.interfaceState.rawValue)
         }
     }
     
@@ -1004,10 +1004,10 @@ extension NTNode {
     open var edgeAntialiasingMask: UInt32 // default==all values from CAEdgeAntialiasingMask
         {
         get {
-            return self._asNode.edgeAntialiasingMask
+            return self._asNode.edgeAntialiasingMask.rawValue
         }
         set {
-            self._asNode.edgeAntialiasingMask = newValue
+            self._asNode.edgeAntialiasingMask = CAEdgeAntialiasingMask(rawValue: newValue)
         }
     }
     
