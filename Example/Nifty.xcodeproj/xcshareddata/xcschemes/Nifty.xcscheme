@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A927C3CD51C30012080D6CA07959B246"
-               BuildableName = "PINCache.framework"
-               BlueprintName = "PINCache"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "A10C753436D59089C77CFB3768595E74"
+               BuildableName = "Nifty.framework"
+               BlueprintName = "Nifty"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
